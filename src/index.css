@@ -1,0 +1,196 @@
+body {
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  background: #f7f7f7;
+}
+
+.column2 {
+   flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+   max-width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+   width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+}
+
+.column2:nth-child(1n) {
+   margin-right: 30px;
+   margin-left: 0;
+}
+
+.column2:last-child {
+   margin-right: 0;
+}
+
+.column2:nth-child(2n) {
+   margin-right: 0;
+   margin-left: auto;
+}
+
+.column2.right {
+       display: flex;
+   }
+
+.column2.right {
+       justify-content: flex-end;
+       align-items: center;
+   }
+
+.column2.left {
+    margin-right: 30px;
+   }
+
+.container {
+  display: grid;
+  place-items: center center;
+  height: 100vh;
+}
+
+.container .activeTabContent {
+    background: #fff;
+    padding: 5px;
+  }
+
+.container .empty-table {
+    margin: 20px;
+    text-align: center;
+  }
+
+/* Tabs */
+
+.tabs {
+  background: #eeffff;
+  border: 1px solid #eae5e5;
+  padding: 3px 3px 15px;
+  width: 60%;
+}
+
+.tabs .tabs-wrapper {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.tabs .tabs-wrapper .tab {
+        padding: 5px 10px;
+        display: inline-block;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+.tabs .tabs-wrapper .tab.active {
+          background: #fff;
+          cursor: default;
+        }
+
+
+/* createLocationTable */
+
+.createLocationTable {
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.createLocationTable .border {
+    border-bottom: 1px solid #eae5e5;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.createLocationTable .location-row {
+      margin-bottom: 10px;
+    }
+
+.createLocationTable input {
+    width: calc(100% - 6px);
+    border: 1px solid #eae5e5;
+    border-radius: 5px;
+    line-height: 18px;
+  }
+
+.createLocationTable select {
+    width: 100%;
+    height: 24px;
+  }
+
+.createLocationTable label {
+    display: block;
+    line-height: 25px;
+    font-size: 12px;
+  }
+
+/* Localtions */
+
+.table {
+  display: table; 
+  width: 100%;
+  font-size: 12px;
+}
+
+.table-row {
+    display: table-row;
+  }
+
+.table-row-heading {
+      color: #666;
+      font-weight: bold;
+    }
+
+.table-cell {
+    display: table-cell;
+    padding: 10px;
+    border-bottom: 1px solid #eae5e5;
+  }
+
+
+/* Buttons */
+.btn-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+    line-height: 28px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn.save {
+      background: #77ca83;
+    }
+
+.btn.delete {
+      background: #e09191;
+    }
+
+.btn.duplicate {
+      border: 1px solid #8aa4e0;
+      color: #48468c;
+      margin-left: 20px;
+    }
+
+.btn.duplicate[disabled] {
+        color: #eae5e5;
+        border: 1px solid #eae5e5;
+        background: #fff;
+      }
+
+.btn[disabled] {
+      background: #eae5e5;
+    }

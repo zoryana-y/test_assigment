@@ -1,0 +1,143 @@
+@lost flexbox flex;
+
+body {
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  background: #f7f7f7;
+}
+
+.column2 {
+   lost-column: 1/2;
+   &.right {
+       lost-align: right;
+   }
+   &.left {
+    margin-right: 30px;
+   }
+}
+
+.container {
+  display: grid;
+  place-items: center center;
+  height: 100vh;
+  .activeTabContent {
+    background: #fff;
+    padding: 5px;
+  }
+  .empty-table {
+    margin: 20px;
+    text-align: center;
+  }
+}
+
+/* Tabs */
+
+.tabs {
+  background: #eeffff;
+  border: 1px solid #eae5e5;
+  padding: 3px 3px 15px;
+  width: 60%;
+  .tabs-wrapper {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+      .tab {
+        padding: 5px 10px;
+        display: inline-block;
+        font-weight: bold;
+        cursor: pointer;
+        &.active {
+          background: #fff;
+          cursor: default;
+        }
+      }
+  }
+}
+
+
+/* createLocationTable */
+
+.createLocationTable {
+  padding: 10px;
+  lost-center: 980px;
+  .border {
+    border-bottom: 1px solid #eae5e5;
+    width: 100%;
+    lost-center: 980px;
+  }
+    .location-row {
+      margin-bottom: 10px;
+    }
+  input {
+    width: calc(100% - 6px);
+    border: 1px solid #eae5e5;
+    border-radius: 5px;
+    line-height: 18px;
+  }
+   select {
+    width: 100%;
+    height: 24px;
+  }
+  label {
+    display: block;
+    line-height: 25px;
+    font-size: 12px;
+  }
+}
+
+/* Localtions */
+
+.table {
+  display: table; 
+  width: 100%;
+  font-size: 12px;
+  &-row {
+    display: table-row;
+    &-heading {
+      color: #666;
+      font-weight: bold;
+    }
+  }
+  &-cell {
+    display: table-cell;
+    padding: 10px;
+    border-bottom: 1px solid #eae5e5;
+  }
+}
+
+
+/* Buttons */
+.btn-wrapper {
+  lost-center: 980px;
+}
+
+.btn {
+    line-height: 28px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 20px;
+    &.save {
+      background: #77ca83;
+    }
+    &.delete {
+      background: #e09191;
+    }
+    &.duplicate {
+      border: 1px solid #8aa4e0;
+      color: #48468c;
+      margin-left: 20px;
+      &[disabled] {
+        color: #eae5e5;
+        border: 1px solid #eae5e5;
+        background: #fff;
+      }
+    }
+    &[disabled] {
+      background: #eae5e5;
+    }
+}
